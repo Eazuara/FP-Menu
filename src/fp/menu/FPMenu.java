@@ -52,9 +52,47 @@ public class FPMenu {
             
         }
         return area;
-    
-    }
+        }
+public static double solicitarDatos(String tipo){ //pide datos 
+double dato;
+Scanner entrada = new Scanner(System.in);
+System.out.print("Introduzca el valor de " + tipo + " : ");
+dato = entrada.nextDouble();
+return dato;
 }
+public static float areaCuadrado(){
+float area;
+double a;
+a = solicitarDatos("un lado"); //pide lado
+area = (float) Math.pow(a, 2); //calcula cuadrado
+return area;
+}
+public static float areaCirculo(){
+float area;
+double r;
+final double pi;
+pi = 3.14;
+r = solicitarDatos("el radio"); //pide radio
+area = (float) (pi*Math.pow(r, 2)); //calcula circulo
+return area;
+}
+public static float areaTriangulo(){
+float area;
+double b,h;
+b = solicitarDatos("la base"); //pide base
+h = solicitarDatos("la altura"); //pide altura
+area = (float)(b*h/2); //calcula area
+return area;
+}
+public static void Salida(){ 
+System.exit(0);//Finalizar Programa
+}
+}
+
+
+    
+    
+
        
     
 
