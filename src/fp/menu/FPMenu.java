@@ -17,29 +17,13 @@ public class FPMenu {
      */
     public static void main(String[] args) {
         // Forma 1 
-    /*float a;
+    float a;
     int m = 0;
     a=CalcularAreas(m);
      m=menu();
-     muestraResultado(a,m);*/
-     //Forma2
-     muestraResultado(CalcularAreas(menu()));
-    }
-    public static void muestraResultado(float area){
-        System.out.println("El area es"+area);
-        
-    }
-    public static void muestraResultado(float area, int r){
-        /*String figura;
-        if (r==1){figura="Cuadrado";}
-        else{
-            if (r==2){figura="Circulo";}
-            else{
-                figura="Triangulo";
-            }
-        }*/
-        System.out.println("El area del"+"es igual a"+area);
-}
+     muestraResultado(a,m);
+     
+  
     public static int menu(){
      Scanner entrada=new Scanner (System.in);
      int opcion;
