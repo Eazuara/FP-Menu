@@ -16,8 +16,30 @@ public class FPMenu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("La opcion elejida es:"+menu());
+        // Forma 1 
+    /*float a;
+    int m = 0;
+    a=CalcularAreas(m);
+     m=menu();
+     muestraResultado(a,m);*/
+     //Forma2
+     muestraResultado(CalcularAreas(menu()));
     }
+    public static void muestraResultado(float area){
+        System.out.println("El area es"+area);
+        
+    }
+    public static void muestraResultado(float area, int r){
+        /*String figura;
+        if (r==1){figura="Cuadrado";}
+        else{
+            if (r==2){figura="Circulo";}
+            else{
+                figura="Triangulo";
+            }
+        }*/
+        System.out.println("El area del"+"es igual a"+area);
+}
     public static int menu(){
      Scanner entrada=new Scanner (System.in);
      int opcion;
@@ -34,8 +56,8 @@ public class FPMenu {
         return opcion;
         
         }
-    public static float CalcularArea(int op){
-        float area;
+    public static float CalcularAreas(int op){
+        float area = 0;
         switch(op){
             case 1:
                 area =areaCuadrado();
@@ -46,10 +68,8 @@ public class FPMenu {
             case 3:
                 area =areaTriangulo();
                 break;
-            default:
-                area =mensajeSalida();
-                break;
-            
+             
+         
         }
         return area;
         }
@@ -88,11 +108,3 @@ public static void Salida(){
 System.exit(0);//Finalizar Programa
 }
 }
-
-
-    
-    
-
-       
-    
-
